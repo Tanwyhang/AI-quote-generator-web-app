@@ -24,7 +24,7 @@ def analyze_emotion(responses):
     # Combine the responses into a single prompt
     prompt = " ".join(response_texts)
 
-    headers = {"Authorization": "Bearer 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"}  # Optional if you have a Hugging Face API token (or leave empty for public)
+    headers = {"Authorization": "Bearer API_KEY"}  # Optional if you have a Hugging Face API token (or leave empty for public)
 
     try:
         # Call Hugging Face API for analysis
@@ -65,7 +65,7 @@ def generate_quote_filtered_len(category):
 
     while True:
         api_url = QUOTE_API_URL.format(category)
-        response = requests.get(api_url, headers={'X-Api-Key': '0Yk6bNo2Ci9PO/97UO3uXA==Ur9T2ZT0WIteJ8IU'})
+        response = requests.get(api_url, headers={'X-Api-Key': 'API_KEY'})
         
         if response.status_code == 200:
             quote_data = response.json()[0]
