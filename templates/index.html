@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <title>Are you okay?</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+
+    <div id="splash-screen">
+        <div id = "splash-text"><h1>Powered by <span class="wy">Wy</span></h1></div>
+        <div class="loading-dots">
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+        </div>
+    </div>
+
+    <div id="watermark">
+        <p>Powered by <span class="wy">Wy</span></p>
+    </div>
+
+
+    <div class="container">
+        <!-- Scene 1: Emotion Questions -->
+        <div id="questions-scene">
+            <h1>Are you okay?</h1>
+            
+            <!-- Circles for Question 1 -->
+
+            <!-- Circles for Question 2 -->
+            <div class="question">
+                <label>How much energy do you feel you have?</label>
+                <div class="circle-container" id="q1"></div>
+            </div>
+
+            <!-- Circles for Question 3 -->
+            <div class="question">
+                <label>How stressed are you feeling?</label>
+                <div class="circle-container" id="q2"></div>
+            </div>
+
+            <!-- Circles for Question 5 -->
+            <div class="question">
+                <label> How motivated do you feel?</label>
+                <div class="circle-container" id="q3"></div>
+            </div>
+
+            <!-- Submit Button -->
+            <button id="submit-btn">Make me Okay</button>
+        </div>
+
+
+        <!-- Scene 2: Quote Display (hidden by default) -->
+        <div id="quote-scene" style="display:none;">
+            <h2>Your Personalized Quote</h2>
+            <p id="quote"></p>
+            <p id="author"></p>
+            <button id="new-quote-btn">I need More</button>
+        </div>
+    </div>
+    
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
